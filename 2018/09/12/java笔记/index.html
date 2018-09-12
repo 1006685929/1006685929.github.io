@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1.继承 java类中只有单继承  2.容器，集合基本概念 Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。 List：有序可重复 Set：无序不可重复   Map接口定义了存储  ” 键（key）——值（Value）“映射对的方法  3.多线程 什么是线程，什么是进程 进程就是一个启动的程序，而线程就是程序里执行操作的控制单元  线程创建的三种方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HXK&#39;Blog">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/java笔记/index.html">
+<meta property="og:site_name" content="HXK&#39;Blog">
+<meta property="og:description" content="1.继承 java类中只有单继承  2.容器，集合基本概念 Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。 List：有序可重复 Set：无序不可重复   Map接口定义了存储  ” 键（key）——值（Value）“映射对的方法  3.多线程 什么是线程，什么是进程 进程就是一个启动的程序，而线程就是程序里执行操作的控制单元  线程创建的三种方式">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-10T07:12:32.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HXK&#39;Blog">
+<meta name="twitter:description" content="1.继承 java类中只有单继承  2.容器，集合基本概念 Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。 List：有序可重复 Set：无序不可重复   Map接口定义了存储  ” 键（key）——值（Value）“映射对的方法  3.多线程 什么是线程，什么是进程 进程就是一个启动的程序，而线程就是程序里执行操作的控制单元  线程创建的三种方式">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/12/java笔记/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | HXK'Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?27cb89b569db5ce43613c8d1a7b8f9c9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HXK'Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/java笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangxiaokang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/chai.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HXK'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-12 19:42:25" itemprop="dateCreated datePublished" datetime="2018-09-12T19:42:25+08:00">2018-09-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-10 15:12:32" itemprop="dateModified" datetime="2018-09-10T15:12:32+08:00">2018-09-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/12/java笔记/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-继承"><a href="#1-继承" class="headerlink" title="1.继承"></a>1.继承</h2><ul>
+<li>java类中只有单继承</li>
+</ul>
+<h2 id="2-容器，集合基本概念"><a href="#2-容器，集合基本概念" class="headerlink" title="2.容器，集合基本概念"></a>2.容器，集合基本概念</h2><ul>
+<li>Collection接口：定义了存取一组对象的方法，其子接口Set和List分别定义了存储方式。<ul>
+<li>List：有序可重复</li>
+<li>Set：无序不可重复</li>
+</ul>
+</li>
+<li>Map接口定义了存储  ” 键（key）——值（Value）“映射对的方法</li>
+</ul>
+<h2 id="3-多线程"><a href="#3-多线程" class="headerlink" title="3.多线程"></a>3.多线程</h2><ul>
+<li><p>什么是线程，什么是进程</p>
+<p>进程就是一个启动的程序，而线程就是程序里执行操作的控制单元</p>
+</li>
+<li><p>线程创建的三种方式</p>
+<ul>
+<li>继承Thread类</li>
+<li>实现runnable接口</li>
+<li>匿名内部类</li>
+</ul>
+</li>
+<li><p>实现方式和继承方式有什么区别：</p>
+<ul>
+<li>实现方式避免了单继承的局限性</li>
+<li>继承Thread:线程代码存放在Thread子类的run方法中</li>
+<li>实现Runnable：线程代码存放在接口的子类的run方法中</li>
+</ul>
+</li>
+<li><p>常见的线程方法</p>
+<ul>
+<li>sleep                          当前线程暂停</li>
+<li>join                             加入到当前线程中</li>
+<li>setPriority                  线程优先级</li>
+<li>yield                             临时暂停</li>
+<li>setDaemon                  守护线程</li>
+</ul>
+</li>
+<li><p>同步（并发）</p>
+<ul>
+<li><p>多线程的同步问题指的是多个线程同时修改一个数据的时候，可能导致的问题 </p>
+</li>
+<li><p>使用synchronized解决同步问题，synchronized表示当前线程，独占对象 someObject 当前线程独占 了对象someObject，如果有其他线程试图占有对象someObject，就会等待，直到当前线程释放对someObject的占用。 someObject 又叫同步对象，所有的对象，都可以作为同步对象 为了达到同步的效果，必须使用同一个同步对象 </p>
+</li>
+<li><p>关键字synchronized解决办法1.同步代码块：<br>synchronized（对象）</p>
+<p>{</p>
+<pre><code>需要被同步的代码
+</code></pre><p>}</p>
+</li>
+<li><p>2.synchronized修饰：</p>
+<p>如果一个类，其方法都是有synchronized修饰的，那么该类就叫做线程安全的类 </p>
+</li>
+</ul>
+</li>
+<li><p>死锁</p>
+<ul>
+<li>wait()和notify()方法进行线程交互</li>
+</ul>
+</li>
+<li><p>线程池</p>
+</li>
+<li><p>Lock接口对象解决同步问题</p>
+<p>与 synchronized (someObject) 类似的，lock()方法，表示当前线程占用lock对象，一旦占用，其他线程就不能占用了。 与 synchronized 不同的是，一旦synchronized 块结束，就会自动释放对someObject的占用。 lock却必须调用unlock方法进行手动释放，为了保证释放的执行，往往会把unlock() 放在finally中进行。 </p>
+</li>
+<li><p>总结Lock和synchronized的区别 </p>
+<ol>
+<li>Lock是一个接口，而synchronized是Java中的关键字，synchronized是内置的语言实现，Lock是代码层面的实现。 </li>
+<li>Lock可以选择性的获取锁，如果一段时间获取不到，可以放弃。synchronized不行，会一根筋一直获取下去。 借助Lock的这个特性，就能够规避死锁，synchronized必须通过谨慎和良好的设计，才能减少死锁的发生。 </li>
+<li>synchronized在发生异常和同步块结束的时候，会自动释放锁。而Lock必须手动释放， 所以如果忘记了释放锁，一样会造成死锁。 </li>
+</ol>
+</li>
+</ul>
+<h2 id="4-Hibernate"><a href="#4-Hibernate" class="headerlink" title="4.Hibernate"></a>4.Hibernate</h2><ul>
+<li><p>JDBC</p>
+<ul>
+<li><p>数据库的crud操作</p>
+</li>
+<li><p>预编译Statement</p>
+<ol>
+<li>和 Statement一样，PreparedStatement也是用来执行sql语句的 </li>
+<li>这是JAVA里唯二的基1的地方，另一个是<a href="http://how2j.cn/k/jdbc/jdbc-resultset/390.html#step866" target="_blank" rel="noopener">查询语句</a>中的ResultSet也是基1的 </li>
+<li>Statement 需要进行字符串拼接，可读性和维护性比较差 ，PreparedStatement 使用参数设置，可读性好，不易犯错 </li>
+<li>PreparedStatement有预编译机制，性能比Statement更快 </li>
+</ol>
+</li>
+<li><p>execute和executeUpdate</p>
+<ol>
+<li><p>相同点：都可以执行增加，删除，修改 </p>
+</li>
+<li><p>不同点：</p>
+<p>execute可以执行查询语句 然后通过getResultSet，把结果集取出来 executeUpdate不能执行查询语句 </p>
+<p>execute返回boolean类型，true表示执行的是查询语句，false表示执行的是insert,delete,update等等 executeUpdate返回的是int，表示有多少条数据受到了影响 </p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>hibernate实际是对jdbc的一种封装</p>
+</li>
+<li><p>ORM（object  relational mapping）对象关系映射</p>
+</li>
+<li><p>MVC思想   （model view controller）模型 视图 控制器 </p>
+</li>
+<li><p>实体类对象在Hibernate中有3种状态</p>
+<ol>
+<li>瞬时：指的是没有和hibernate发生任何关系，在数据库中也没有对应的记录，一旦JVM结束，这个对象也就消失了 </li>
+<li>持久：指得是一个对象和hibernate发生联系，有对应的session,并且在数据库中有对应的一条记录 </li>
+<li>托管：指的是一个对象虽然在数据库中有对应的一条记录，但是它所对应的session已经关闭了 </li>
+</ol>
+</li>
+<li><p>HQL ( hibernate query language )  hibernate专门用于查询数据的语句 </p>
+<ul>
+<li>使用Criteria查询<ol>
+<li>与HQL和SQL的区别是Criteria 完全是 面向对象的方式在进行数据查询，将不再看到有sql语句的痕迹 </li>
+<li>Criteria 还可以很方便的进行进行<a href="http://how2j.cn/k/hibernate/hibernate-paging/49.html" target="_blank" rel="noopener">分页查询</a>和<a href="http://how2j.cn/k/hibernate/hibernate-count/85.html" target="_blank" rel="noopener">获取总数</a> </li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>关系</p>
+<ul>
+<li>一对一<ol>
+<li>共享主键方式：就是限制两个数据表的主键使用相同的值，通过主键形成一对一映射关系</li>
+<li>唯一外键方式：就是一个表中的外键和另一个表中的唯一主键对应形成一对一映射关系</li>
+</ol>
+</li>
+<li>多对一</li>
+<li>一对多</li>
+<li>多对多</li>
+</ul>
+</li>
+<li><p>事务</p>
+<ul>
+<li>Hibernate的任何对数据有改动的操作，都应该被放在事务里面 ，在事务中的多个操作行为，要么都成功，要么都失败 </li>
+</ul>
+</li>
+<li><p>延迟加载</p>
+<ul>
+<li>属性的延迟加载:  当使用load的方式来获取对象的时候，只有访问了这个对象的属性，hibernate才会到数据库中进行查询。否则不会访问数据库 </li>
+<li>比如有的页面只需要显示分类信息，这个时候倘若没有开启延迟加载，那么就会把分类下的产品也查询出来了，增加了不必要的开销 </li>
+<li>什么是级联 ：简单的说，没有配置级联的时候，删除分类，其对应的产品不会被删除。 但是如果配置了恰当的级联，那么删除分类的时候，其对应的产品都会被删除掉 </li>
+</ul>
+</li>
+<li><p>缓存</p>
+<ul>
+<li>Hibernate的一级缓存是在Session上（默认开启），二级缓存是在SessionFactory上 </li>
+</ul>
+</li>
+<li><p>两种获取方式</p>
+<ul>
+<li><p>load方式是延迟加载，只有属性被访问的时候才会调用sql语句</p>
+</li>
+<li><p>get方式是非延迟加载，无论后面的代码是否会访问到属性，马上执行sql语句</p>
+<p>代码比较复制代码</p>
+</li>
+</ul>
+</li>
+<li><p>注解</p>
+<ul>
+<li>hibernate里常用注解包括，类注解，属性注解，关系注解，其他的注解 </li>
+</ul>
+</li>
+</ul>
+<h2 id="5-网络编程"><a href="#5-网络编程" class="headerlink" title="5.网络编程"></a>5.网络编程</h2><ul>
+<li>使用Socket进行不同程序间的通信<ul>
+<li>建立连接<ol>
+<li>服务端开启端口并监听，时刻等待客户端的连接请求</li>
+<li>客户端知道服务端的ip地址和监听端口号，发出请求到服务端</li>
+<li>客户端的端口地址是系统分配的，一旦建立连接，服务器会得到一个新的Socket对象，该对象负责与客户端进行通信</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-Struts2"><a href="#6-Struts2" class="headerlink" title="6.Struts2"></a>6.Struts2</h2><ul>
+<li>Javaweb三层框架<ul>
+<li>web层：表示层，主要架构模式为MVC，主要框架有Spring MVC和Struts2</li>
+<li>Service层：业务逻辑层，主要框架有Spring</li>
+<li>Dao层：数据访问层，主要框架有：MyBatis和Hibernate</li>
+</ul>
+</li>
+<li>SSH：Struts2 + Spring + Hibernate</li>
+<li><p>SSM：Spring MVC + Spring + MyBatis（目前更流行）</p>
+</li>
+<li><p>struts2是基于MVC的Web框架</p>
+</li>
+</ul>
+<h2 id="7-Spring"><a href="#7-Spring" class="headerlink" title="7.Spring"></a>7.Spring</h2><ul>
+<li>分层：<ul>
+<li>web层： struts，springmvc</li>
+<li>service层：spring</li>
+<li>dao层：hibernate，mybatis，jdbcTemplate，spring-data</li>
+</ul>
+</li>
+</ul>
+<p>###1.什么是Spring</p>
+<ul>
+<li><p>spring是一个基于IOC和APO的结构的J2EE系统的轻量级框架，Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情 ，它的核心主要是控制反转和面向切面。</p>
+</li>
+<li><p><strong>IOC（Inversion Of Control）反转控制是spring的基础</strong>，简单地说就是创造对象由以前的程序员自己new构造方法来调用，变成了交由spring创建对象。</p>
+</li>
+<li><p><strong>Ioc—Inversion of Control，即“控制反转”，不是什么技术，而是一种设计思想。</strong>在Java开发中，<strong>Ioc意味着将你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。</strong>如何理解好Ioc呢？理解好Ioc的关键是要明确“谁控制谁，控制什么，为何是反转（有反转就应该有正转了），哪些方面反转了”，那我们来深入分析一下：</p>
+<p>　　●<strong>谁控制谁，控制什么：</strong>传统Java SE程序设计，我们直接在对象内部通过new进行创建对象，是程序主动去创建依赖对象；而IoC是有专门一个容器来创建这些对象，即由Ioc容器来控制对 象的创建；<strong>谁控制谁？当然是IoC 容器控制了对象；控制什么？那就是主要控制了外部资源获取（不只是对象包括比如文件等）。</strong></p>
+<p>　　●<strong>为何是反转，哪些方面反转了：</strong>有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而反转则是由容器来帮忙创建及注入依赖对象；为何是反转？<strong>因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。</strong></p>
+</li>
+<li><p><strong>AOP（Aspect Oriented Programming ）面向切面</strong>，AOP主要实现的目的是针对业务处理过程中的切面进行提取，它所面对的是处理过程中的某个步骤或阶段，以获得逻辑过程中各部分之间低耦合性的隔离效果 ，通俗点讲就是提供一个为一个业务实现提供切面注入的机制，通过这种方式，在业务运行中将定义好的切面通过切入点绑定到业务中，以实现将一些特殊的逻辑绑定到此业务中 。</p>
+</li>
+<li>DI依赖注入Dependency Inject，简单地说就是拿到对象的属性，已经被注入好相关值了，直接使用即可。</li>
+<li>核心容器：bean，core，context，expression</li>
+</ul>
+<h3 id="2-Spring的优点"><a href="#2-Spring的优点" class="headerlink" title="2.Spring的优点"></a>2.Spring的优点</h3><ul>
+<li><p><strong>方便解耦，简化开发（高内聚低耦合)</strong></p>
+<p>Spring就是一个大工厂（容器），可以将所有的对象创建和依赖关系维护，交给Spring管理  spring工厂是用于生成<strong>bean</strong> 。</p>
+</li>
+<li><p><strong>AOP编程的支持</strong></p>
+<p>Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能 </p>
+</li>
+<li><p><strong>声明式事务的支持</strong> </p>
+<p>只需要通过配置就可以完成对事务的管理，而无需手动编程 </p>
+</li>
+<li><p><strong>方便程序的测试</strong> </p>
+<p>Spring对Junit4支持，可以通过注解方便的测试Spring程序 </p>
+</li>
+<li><p><strong>方便集成各种优秀框架</strong> </p>
+<p>Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架（如：Struts、Hibernate、MyBatis、Quartz等）的直接支持 </p>
+</li>
+<li><p><strong>降低JavaEE API的使用难度</strong> </p>
+<p>Spring 对JavaEE开发中非常难用的一些API（JDBC、JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低 </p>
+</li>
+</ul>
+<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><h2 id="8-注解"><a href="#8-注解" class="headerlink" title="8.注解"></a>8.注解</h2><ul>
+<li>Annotation的作用：<ul>
+<li>不是程序本身，可以对程序做出解释（这一点和注释没什么区别）</li>
+<li>可以被其他程序读取（注解信息处理流程，是注解和注释最大的区别。如果没有注解信息处理流程，则注解毫无意义）</li>
+</ul>
+</li>
+<li>Annotation的格式<ul>
+<li>注解是以 @注释名  在代码中存在的，还可以添加一些参数值例如：@SuppressWarnings（value =”unchecked“)</li>
+</ul>
+</li>
+<li>基本内置注解<ul>
+<li>@Override </li>
+<li>@Deprecated </li>
+<li>@SuppressWarnings Suppress </li>
+<li>等等</li>
+</ul>
+</li>
+<li>自定义注解<ul>
+<li>创建注解类型的时候即不使用class也不使用interface,而是使用@interface </li>
+<li>public @interface JDBCConfig </li>
+</ul>
+</li>
+<li>元注解<ul>
+<li>@Target({METHOD,TYPE}) 表示这个注解可以用用在类/接口上，还可以用在方法上 @Retention(RetentionPolicy.RUNTIME) 表示这是一个运行时注解，即运行起来之后，才获取注解中的相关信息，而不像基本注解如<a href="http://how2j.cn/k/annotation/annotation-system/1060.html#step4028" target="_blank" rel="noopener">@Override </a>那种不用运行，在编译时eclipse就可以进行相关工作的编译时注解。 @Inherited 表示这个注解可以被子类继承 </li>
+<li>注解元素，这些注解元素就用于存放注解信息，在解析的时候获取出来 </li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+		 <div>
+
+<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+</div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>huangxiaokang</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2018/09/12/java笔记/" title="">http://yoursite.com/2018/09/12/java笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/chai.jpg"
+                alt="huangxiaokang" />
+            
+              <p class="site-author-name" itemprop="name">huangxiaokang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-继承"><span class="nav-number">1.</span> <span class="nav-text">1.继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-容器，集合基本概念"><span class="nav-number">2.</span> <span class="nav-text">2.容器，集合基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-多线程"><span class="nav-number">3.</span> <span class="nav-text">3.多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Hibernate"><span class="nav-number">4.</span> <span class="nav-text">4.Hibernate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-网络编程"><span class="nav-number">5.</span> <span class="nav-text">5.网络编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Struts2"><span class="nav-number">6.</span> <span class="nav-text">6.Struts2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Spring"><span class="nav-number">7.</span> <span class="nav-text">7.Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Spring的优点"><span class="nav-number">7.1.</span> <span class="nav-text">2.Spring的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3"><span class="nav-number">7.2.</span> <span class="nav-text">3.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-注解"><span class="nav-number">8.</span> <span class="nav-text">8.注解</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangxiaokang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "7HLliIdzmoQbjE3d7zsrpvM8-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "7HLliIdzmoQbjE3d7zsrpvM8-gzGzoHsz",
+                'X-LC-Key': "fGmrlfK2mPp7SsPplBu5j3G6",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
