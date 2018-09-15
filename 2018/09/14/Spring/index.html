@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '6.4.1',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -109,14 +109,15 @@
 
 
   <meta name="description" content="Spring 分层：  web层： struts，springmvc  service层：spring  dao层：hibernate，mybatis，jdbcTemplate，spring-data">
+<meta name="keywords" content="框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring">
 <meta property="og:url" content="http://yoursite.com/2018/09/14/Spring/index.html">
-<meta property="og:site_name" content="HXK&#39;Blog">
+<meta property="og:site_name" content="HXK">
 <meta property="og:description" content="Spring 分层：  web层： struts，springmvc  service层：spring  dao层：hibernate，mybatis，jdbcTemplate，spring-data">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/09/14/Spring/Users/hxk/Desktop/Typora/assets/1536895786375.png">
-<meta property="og:updated_time" content="2018-09-14T10:29:41.524Z">
+<meta property="og:updated_time" content="2018-09-15T03:10:55.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring">
 <meta name="twitter:description" content="Spring 分层：  web层： struts，springmvc  service层：spring  dao层：hibernate，mybatis，jdbcTemplate，spring-data">
@@ -137,13 +138,23 @@
   };
 </script>
 
-  <title>spring | HXK'Blog</title>
+  <title>spring | HXK</title>
   
 
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?27cb89b569db5ce43613c8d1a7b8f9c9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -195,7 +206,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">HXK'Blog</span>
+        <span class="site-title">HXK</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -332,13 +343,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="huangxiaokang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="superman">
+      <meta itemprop="description" content="运动只为改变">
+      <meta itemprop="image" content="/images/chai.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HXK'Blog">
+      <meta itemprop="name" content="HXK">
     </span>
 
     
@@ -371,12 +382,24 @@
                 
               
 
-              <time title="创建时间：2018-09-14 20:18:01 / 修改时间：18:29:41" itemprop="dateCreated datePublished" datetime="2018-09-14T20:18:01+08:00">2018-09-14</time>
+              <time title="创建时间：2018-09-14 20:18:01" itemprop="dateCreated datePublished" datetime="2018-09-14T20:18:01+08:00">2018-09-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-15 11:10:55" itemprop="dateModified" datetime="2018-09-15T11:10:55+08:00">2018-09-15</time>
               
             
           </span>
@@ -389,15 +412,18 @@
 
           
           
-
+             <span id="/2018/09/14/Spring/" class="leancloud_visitors" data-flag-title="spring">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
+
           
 
           
@@ -417,7 +443,7 @@
       
 
       
-        <h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><ul>
+        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><ul>
 <li><p>分层：</p>
 <ul>
 <li><p>web层： struts，springmvc</p>
@@ -430,16 +456,14 @@
 </ul>
 </li>
 </ul>
-<p>##1.什么是Spring</p>
-<ul>
+<h2 id="1-什么是Spring"><a href="#1-什么是Spring" class="headerlink" title="1.什么是Spring"></a>1.什么是Spring</h2><ul>
 <li>spring是一个基于<strong>IOC</strong>和APO的结构的J2EE系统的轻量级框架，Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情 ，它的核心主要是ioc和aop。</li>
 <li><strong>IOC（Inversion Of Control）反转控制是spring的基础</strong>，简单地说就是创造对象由以前的程序员自己new构造方法来调用，变成了交由spring创建对象。</li>
 <li><strong>DI依赖注入（Dependency Inject）</strong>，简单地说就是拿到对象的属性，已经被注入好相关值了，直接使用即可。</li>
 <li></li>
 </ul>
-<p>##2.IOC思想：</p>
-<p>​          其思想是反转资源获取的方向，传统的资源查找方式要求组件向容器发起请求查找资源，作为应答，容器适时的返回资源，而应用了IOC后，则是<strong>则是容器主动的将资源推送给它所在的管理组件，组件所要做的仅是选择一种合适的方式来接受资源</strong>，这种行为也被称为查找的被动形式。</p>
-<ul>
+<h2 id="2-IOC思想："><a href="#2-IOC思想：" class="headerlink" title="2.IOC思想："></a>2.IOC思想：</h2><pre><code>其思想是反转资源获取的方向，传统的资源查找方式要求组件向容器发起请求查找资源，作为应答，容器适时的返回资源，而应用了IOC后，则是**则是容器主动的将资源推送给它所在的管理组件，组件所要做的仅是选择一种合适的方式来接受资源**，这种行为也被称为查找的被动形式。
+</code></pre><ul>
 <li><strong>IOC（Inversion Of Control）反转控制是spring的基础</strong>，简单地说就是创造对象由以前的程序员自己new构造方法来调用，变成了交由spring创建对象。</li>
 </ul>
 <ul>
@@ -449,12 +473,23 @@
 </li>
 <li><p><strong>AOP（Aspect Oriented Programming ）面向切面</strong>，AOP主要实现的目的是针对业务处理过程中的切面进行提取，它所面对的是处理过程中的某个步骤或阶段，以获得逻辑过程中各部分之间低耦合性的隔离效果 ，通俗点讲就是提供一个为一个业务实现提供切面注入的机制，通过这种方式，在业务运行中将定义好的切面通过切入点绑定到业务中，以实现将一些特殊的逻辑绑定到此业务中 。</p>
 </li>
+</ul>
+<ul>
+<li><ul>
+<li>首先，在面向切面编程的思想里面，把功能分为核心业务功能，和周边功能</li>
+<li>所谓的核心业务，比如登陆，增加数据，删除数据都叫核心业务 </li>
+<li>所谓的周边功能，比如性能统计，日志，事务管理等等 </li>
+<li>周边功能在Spring的面向切面编程AOP思想里，即被定义为切面</li>
+<li>在面向切面编程AOP的思想里面，核心业务功能和切面功能分别独立进行开发,然后把切面功能和核心业务功能 “编织” 在一起，这就叫AOP</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p>核心容器：bean，core，context，expression</p>
 <p><img src="/2018/09/14/Spring/Users\hxk\Desktop\Typora\assets\1536895786375.png" alt="1536895786375"></p>
 </li>
 </ul>
-<p>##2.Spring的优点</p>
-<ul>
+<h2 id="3-Spring的优点"><a href="#3-Spring的优点" class="headerlink" title="3.Spring的优点"></a>3.Spring的优点</h2><ul>
 <li><p><strong>方便解耦，简化开发（高内聚低耦合)</strong></p>
 <p>Spring就是一个大工厂（容器），可以将所有的对象创建和依赖关系维护，交给Spring管理  spring工厂是用于生成<strong>bean</strong> 。</p>
 </li>
@@ -474,13 +509,17 @@
 <p>Spring 对JavaEE开发中非常难用的一些API（JDBC、JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低 </p>
 </li>
 </ul>
-<p>##3.配置Bean</p>
-<ol>
+<h2 id="4-Spring的3种配置方式"><a href="#4-Spring的3种配置方式" class="headerlink" title="4.Spring的3种配置方式"></a>4.Spring的3种配置方式</h2><ol>
+<li>基于XML的配置</li>
+<li>基于注解的配置</li>
+<li>基于Java的配置</li>
+</ol>
+<h1 id="2-配置Bean"><a href="#2-配置Bean" class="headerlink" title="2.配置Bean"></a>2.配置Bean</h1><ol>
 <li>配置形式：基于XML文件的方式，基于注解的方式</li>
 <li>Bean的配置方式：通过反射，通过工厂方法，FactoryBean</li>
 <li>IOC容器</li>
 </ol>
-<h3 id="1-Spring容器"><a href="#1-Spring容器" class="headerlink" title="1.Spring容器"></a>1.Spring容器</h3><ul>
+<h2 id="1-Spring容器"><a href="#1-Spring容器" class="headerlink" title="1.Spring容器"></a>1.Spring容器</h2><ul>
 <li><p>在SpringIOC容器读取Bean配置创建Bean实例之前必须对他进行实例化，只有容器实例化后，才可以从IOC容器里获取Bean实例并使用。</p>
 </li>
 <li><p>Spring提供两种类型的IOC容器实现</p>
@@ -493,7 +532,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建Spring的IOC容器对象</span></span><br><span class="line"><span class="comment">//ApplicationContext 代表容器</span></span><br><span class="line"><span class="comment">//ClassPathXmlApplicationContext 是 ApplicationContext 接口的实现类：从类路径加载配置文件</span></span><br><span class="line">ApplicationContext ctx = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.从IOC容器中获取bean实例</span></span><br><span class="line"><span class="comment">//利用id定位到IOC容器中的Bean</span></span><br><span class="line">HelloWorld helloWorld = (HelloWorld) ctx.getBean(<span class="string">"helloworld"</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="2-依赖注入的方式"><a href="#2-依赖注入的方式" class="headerlink" title="2.依赖注入的方式"></a>2.依赖注入的方式</h2><p>###1，属性注入</p>
+<h2 id="2-依赖注入的方式"><a href="#2-依赖注入的方式" class="headerlink" title="2.依赖注入的方式"></a>2.依赖注入的方式</h2><p>###1，setter注入</p>
 <ul>
 <li><p>属性注入即通过setter方法注入Bean的属性值或依赖的对象</p>
 </li>
@@ -503,10 +542,10 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">"helloworld"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.HelloWorld"</span>&gt;</span><br><span class="line">    &lt;property name="name2" value="Spring"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>###2，构造方法注入</p>
+<p>###2，构造器注入</p>
 <ul>
 <li>通过构造方法注入Bean的属性值或依赖的对象，它保证了Bean实例在实例化后就可以使用。</li>
-<li>构造器注入《construct-arg》元素声明属性</li>
+<li>构造器注入<construct-arg>元素声明属性</construct-arg></li>
 </ul>
 <p>###3，工厂方法注入</p>
 <h3 id="4，Bean之间的引用"><a href="#4，Bean之间的引用" class="headerlink" title="4，Bean之间的引用"></a>4，Bean之间的引用</h3><ul>
@@ -516,6 +555,55 @@
 <li>不能被外部Bean引用</li>
 </ul>
 </li>
+<li>级联属性赋值：</li>
+<li>集合属性配置（list和map集合和Properties）</li>
+<li>使用Utility scheme 定义集合（外部bean可用）</li>
+<li>通过p 命名空间为Bean的属性赋值</li>
+</ul>
+<h1 id="3-自动装配"><a href="#3-自动装配" class="headerlink" title="3.自动装配"></a>3.自动装配</h1><h2 id="1-XML配置的Bean自动装配"><a href="#1-XML配置的Bean自动装配" class="headerlink" title="1.XML配置的Bean自动装配"></a>1.XML配置的Bean自动装配</h2><ul>
+<li><p>Spring IOC容器可以自动装配Bean，需要做的就是仅仅在<bean>的autowire属性里指定自动装配的模式</bean></p>
+</li>
+<li><p>byType(根据类型自动装配)：若IOC容器中有多个与目标Bean类型一致的Bean，在这种情况下，Spring将无法判哪个合适，所以不能自动装配。</p>
+</li>
+<li><p>byName(根据名称自动装配)：必须将目标Bean的名称和属性名设置完全相同</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--自动匹配装配autowire--&gt;</span><br><span class="line">&lt;bean id=&quot;person&quot; class=&quot;out.Person&quot;</span><br><span class="line">p:name=&quot;小哥&quot; autowire=&quot;byType&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="2-继承Bean配置"><a href="#2-继承Bean配置" class="headerlink" title="2.继承Bean配置"></a>2.继承Bean配置</h2><ul>
+<li>子Bean可以覆盖从父Bean继承过来的配置</li>
+<li><p>并不是《bean》元素里的所有属性都会被继承</p>
+</li>
+<li><p>3.Bean之间的依赖</p>
+</li>
+</ul>
+<h1 id="4-Bean的作用域"><a href="#4-Bean的作用域" class="headerlink" title="4.Bean的作用域"></a>4.Bean的作用域</h1><ul>
+<li>定义一个作用域<ul>
+<li>当定义一个<bean> 在Spring里，我们还能给这个bean声明一个作用域。它可以通过bean 定义中的scope属性来定义。如，当Spring要在需要的时候每次生产一个新的bean实例，bean的scope属性被指定为prototype。另一方面，一个bean每次使用的时候必须返回同一个实例，这个bean的scope 属性 必须设为 singleton。</bean></li>
+</ul>
+</li>
+<li>Spring支持的几种bean的<strong>作用域</strong><ul>
+<li>singleton : bean在每个Spring ioc 容器中只有一个实例</li>
+<li>prototype：一个bean的定义可以有多个实例</li>
+<li>request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。</li>
+<li>session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。</li>
+<li>global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-Bean的生命周期"><a href="#5-Bean的生命周期" class="headerlink" title="5.Bean的生命周期"></a>5.Bean的生命周期</h1><p>Spring Bean的生命周期简单易懂。在一个bean实例被初始化时，需要执行一系列的初始化操作以达到可用的状态。同样的，当一个bean不在被调用时需要进行相关的析构操作，并从bean容器中移除。</p>
+<p>Spring bean factory 负责管理在spring容器中被创建的bean的生命周期。Bean的生命周期由两组回调（call back）方法组成</p>
+<ol>
+<li>初始化之后调用的回调方法。</li>
+<li>销毁之前调用的回调方法。</li>
+</ol>
+<ul>
+<li>Spring容器 从XML 文件中读取bean的定义，并实例化bean。</li>
+<li>Spring根据bean的定义填充所有的属性。</li>
+<li>调用Bean的初始化方法。</li>
+<li>bean就可以使用了</li>
+<li>当容器关闭时，调用Bean的销毁方法</li>
+<li>在Bean的声明里设置init-method和destroy-method属性，为Bean指定初始化和销毁方法。</li>
 </ul>
 
       
@@ -541,8 +629,28 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>superman</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2018/09/14/Spring/" title="spring">http://yoursite.com/2018/09/14/Spring/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/框架/" rel="tag"># 框架</a>
+          
+        </div>
       
 
       
@@ -624,8 +732,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">huangxiaokang</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <img class="site-author-image" itemprop="image"
+                src="/images/chai.jpg"
+                alt="superman" />
+            
+              <p class="site-author-name" itemprop="name">superman</p>
+              <p class="site-description motion-element" itemprop="description">运动只为改变</p>
           </div>
 
           
@@ -665,7 +777,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -701,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">1.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Spring容器"><span class="nav-number">1.1.</span> <span class="nav-text">1.Spring容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-依赖注入的方式"><span class="nav-number">2.</span> <span class="nav-text">2.依赖注入的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4，Bean之间的引用"><span class="nav-number">2.1.</span> <span class="nav-text">4，Bean之间的引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring"><span class="nav-number">1.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是Spring"><span class="nav-number">1.1.</span> <span class="nav-text">1.什么是Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-IOC思想："><span class="nav-number">1.2.</span> <span class="nav-text">2.IOC思想：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Spring的优点"><span class="nav-number">1.3.</span> <span class="nav-text">3.Spring的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Spring的3种配置方式"><span class="nav-number">1.4.</span> <span class="nav-text">4.Spring的3种配置方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-配置Bean"><span class="nav-number">2.</span> <span class="nav-text">2.配置Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Spring容器"><span class="nav-number">2.1.</span> <span class="nav-text">1.Spring容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-依赖注入的方式"><span class="nav-number">2.2.</span> <span class="nav-text">2.依赖注入的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4，Bean之间的引用"><span class="nav-number">2.2.1.</span> <span class="nav-text">4，Bean之间的引用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-自动装配"><span class="nav-number">3.</span> <span class="nav-text">3.自动装配</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-XML配置的Bean自动装配"><span class="nav-number">3.1.</span> <span class="nav-text">1.XML配置的Bean自动装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-继承Bean配置"><span class="nav-number">3.2.</span> <span class="nav-text">2.继承Bean配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Bean的作用域"><span class="nav-number">4.</span> <span class="nav-text">4.Bean的作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Bean的生命周期"><span class="nav-number">5.</span> <span class="nav-text">5.Bean的生命周期</span></a></li></ol></div>
             
 
           </div>
@@ -725,7 +839,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">huangxiaokang</span>
+  <span class="author" itemprop="copyrightHolder">superman</span>
 
   
 
@@ -743,30 +857,12 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.1</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.1</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 
@@ -814,9 +910,14 @@
 
 
 
+  
 
 
 
+
+
+  
+  
 
 
 
@@ -839,6 +940,21 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
@@ -1209,6 +1325,72 @@
 
 
   
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "7HLliIdzmoQbjE3d7zsrpvM8-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "7HLliIdzmoQbjE3d7zsrpvM8-gzGzoHsz",
+                'X-LC-Key': "fGmrlfK2mPp7SsPplBu5j3G6",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
 
   
 
